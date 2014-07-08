@@ -1,40 +1,61 @@
 {
-	"name": "yiisoft/yii2-app-advanced",
-	"description": "Yii 2 Advanced Application Template",
+	"name": "paunin/yii2boilerplate",
+	"description": "Yii 2 boilerplate based on Yii 2 Advanced Application Template",
 	"keywords": ["yii2", "framework", "advanced", "application template"],
-	"homepage": "http://www.yiiframework.com/",
+	"homepage": "https://github.com/paunin/yii2boilerplate",
 	"type": "project",
 	"license": "BSD-3-Clause",
 	"support": {
-		"issues": "https://github.com/yiisoft/yii2/issues?state=open",
-		"forum": "http://www.yiiframework.com/forum/",
+		"issues": "https://github.com/paunin/yii2boilerplate/issues?state=open",
+		"forum": "https://github.com/paunin/yii2boilerplate/",
 		"wiki": "http://www.yiiframework.com/wiki/",
-		"irc": "irc://irc.freenode.net/yii",
-		"source": "https://github.com/yiisoft/yii2"
+		"source": "https://github.com/paunin/yii2boilerplate/"
 	},
 	"minimum-stability": "dev",
 	"require": {
 		"php": ">=5.4.0",
 		"yiisoft/yii2": "*",
 		"yiisoft/yii2-bootstrap": "*",
-		"yiisoft/yii2-swiftmailer": "*"
+		"yiisoft/yii2-swiftmailer": "*",
+		"luracast/restler": "*",
+        "wordnik/swagger-ui": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",
 		"yiisoft/yii2-debug": "*",
-		"yiisoft/yii2-gii": "*"
+		"yiisoft/yii2-gii": "*",
+        "wordnik/swagger-ui": "*"
+
 	},
+
+    "repositories":[
+        {
+            "type":"package",
+            "package":{
+                "name":"wordnik/swagger-ui",
+                "version":"2.0.17",
+                "source":{
+                    "type":"git",
+                    "url":"https://github.com/wordnik/swagger-ui.git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
 	"suggest": {
 		"codeception/codeception": "Codeception, 2.0.* is currently works well with Yii.",
 		"codeception/specify": "BDD style code blocks for PHPUnit and Codeception",
 		"codeception/verify": "BDD Assertions for PHPUnit and Codeception",
-		"yiisoft/yii2-faker": "Fixtures generator for Yii2 based on Faker lib"
+		"yiisoft/yii2-faker": "Fixtures generator for Yii2 based on Faker lib",
+        "luracast/restler":  "Restful API framework with autogeneration docs for Swagger",
+        "wordnik/swagger-ui": "Explorer for restler API"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
 			"yii\\composer\\Installer::setPermission"
 		]
 	},
+
 	"config": {
 		"process-timeout": 1800
 	},
