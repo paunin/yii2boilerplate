@@ -1,28 +1,22 @@
 <?php
+require_once './yiinorun.php';
 
-/**
- * Simple Api realization
- */
-class MyApi {
-    public  $api_version = '1';
-
-    /**
-     * Get API versionGet
-     *
-     * In order u should use smile for work with me
-     *
-     * @return string
-     */
-    public function info(){
-        return 'Ver. - ' . $this->api_version;
-    }
-}
-
-require_once '../../../vendor/luracast/restler/vendor/restler.php';
+use Luracast\Restler\Defaults;
+use Luracast\Restler\Format;
+use Luracast\Restler\Util;
+//require_once '../../../vendor/luracast/restler/vendor/restler.php';
 
 use Luracast\Restler\Restler;
+Defaults::$useUrlBasedVersioning = true;
+Defaults::$throttle = 20;
+//@todo
+//Defaults::$cacheDirectory = Yii::getPathOfAlias('application').'/runtime/cache';
+//Defaults::$supportedLanguages = array_keys(Yii::app()->params['translatedLanguages']);
+Defaults::$language = \Yii::$app->language;
+
 
 $r = new Restler();
-$r->addAPIClass('MyApi'); // repeat for more
+$r->setAPIVersion(2);
+$r->addAPIClass('\\common\\models\\api\\MyApi'); // repeat for more
 $r->addAPIClass('Resources'); //from restler framework for API Explorer
 $r->handle(); //serve the response
