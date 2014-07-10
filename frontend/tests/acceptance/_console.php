@@ -8,8 +8,9 @@ return yii\helpers\ArrayHelper::merge(
     [
         'components' => [
             'db' => [
-                'dsn' => 'mysql:host=localhost;dbname=yii2_advanced_acceptance',
-            ],
+                'class' => 'yii\db\Connection',
+                'dsn' => 'pgsql:host=127.0.0.1;dbname=yii2_paunin_com_acceptance',
+            ]
         ],
     ]
 );

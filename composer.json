@@ -18,13 +18,17 @@
 		"yiisoft/yii2-bootstrap": "*",
 		"yiisoft/yii2-swiftmailer": "*",
 		"luracast/restler": "*",
-        "wordnik/swagger-ui": "*"
+		"wordnik/swagger-ui": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",
 		"yiisoft/yii2-debug": "*",
 		"yiisoft/yii2-gii": "*",
-        "wordnik/swagger-ui": "*"
+		"wordnik/swagger-ui": "*",
+		"codeception/codeception": "1.8.*",
+		"codeception/specify": " *",
+		"codeception/verify": " *",
+		"yiisoft/yii2-faker": " *"
 
 	},
 
@@ -47,8 +51,8 @@
 		"codeception/specify": "BDD style code blocks for PHPUnit and Codeception",
 		"codeception/verify": "BDD Assertions for PHPUnit and Codeception",
 		"yiisoft/yii2-faker": "Fixtures generator for Yii2 based on Faker lib",
-        "luracast/restler":  "Restful API framework with autogeneration docs for Swagger",
-        "wordnik/swagger-ui": "Explorer for restler API"
+		"luracast/restler":  "Restful API framework with autogeneration docs for Swagger",
+		"wordnik/swagger-ui": "Explorer for restler API"
 	},
 	"scripts": {
 		"post-create-project-cmd": [

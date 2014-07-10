@@ -13,7 +13,7 @@ return yii\helpers\ArrayHelper::merge(
     [
         'components' => [
             'db' => [
-                'dsn' => 'mysql:host=localhost;dbname=yii2_advanced_functional',
+                'dsn' => 'pgsql:host=localhost;dbname=yii2_paunin_com_unit',
             ],
         ],
     ]
